@@ -1,11 +1,11 @@
 import React from "react";
 import { assets } from "../assets/assets";
-
+import {useNavigate} from 'react-router-dom'
 const CarCard = ({ car }) => {
   const currency = import.meta.env.VITE_CURRENCY;
-
+  const navigate = useNavigate()
   return (
-    <div
+    <div onClick={()=> {navigate(`/car-details/${car._id}`); scrollTo(0,0)}}
       className="group rounded-xl overflow-hidden shadow-lg hover: -translate-y-1
 transition-all duration-500 cursor-pointer"
     >
