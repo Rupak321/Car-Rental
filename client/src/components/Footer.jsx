@@ -21,24 +21,20 @@ const Footer = () => {
             </a>
             <a href="#">
               <img
-                src={assets.instagram_logo_logo}
+                src={assets.instagram_logo}
                 className="w-5 h-5"
                 alt="Instagram"
               />
             </a>
             <a href="#">
               <img
-                src={assets.twitter_logo_logo}
+                src={assets.twitter_logo}
                 className="w-5 h-5"
                 alt="Twitter"
               />
             </a>
             <a href="#">
-              <img
-                src={assets.gmail_logo_logo}
-                className="w-5 h-5"
-                alt="Gmail"
-              />
+              <img src={assets.gmail_logo} className="w-5 h-5" alt="Gmail" />
             </a>
           </div>
         </div>
