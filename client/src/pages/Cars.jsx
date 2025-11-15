@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Title from "../components/Title";
-import { assets } from "../assets/assets";
+import { assets, dummyCarData } from "../assets/assets";
+import CarCard from "../components/CarCard";
 const Cars = () => {
   const [input, setInput] = useState("");
 
@@ -25,7 +26,18 @@ const Cars = () => {
         </div>
       </div>
 
-      <div></div>
+      <div className="px-6 md:px-16 lg:px-24 xl:px-32 mt-10">
+        <p className="text-gray-500 xl:px-20 max-w-7xl mx-auto">
+          Showing {dummyCarData.length} Cars
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-4 xl:px-20 max-w7xl mx-auto">
+          {dummyCarData.map((car, index) => (
+            <div key={index}>
+              <CarCard car={car} />
+            </div>
+          ))}
+        </div>
+      </div>
     </div>
   );
 };
