@@ -49,6 +49,32 @@ const AddCar = () => {
           </label>
           <p className="text-sm text-gray-500">Upload a pictue of your car.</p>
         </div>
+        {/* Car Brand and Model */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="flex flex-col w-full">
+            <label> Brand</label>
+            <input
+              type="text"
+              placeholder="e.g. BMW, Mercedes, Audi....."
+              required
+              className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none"
+              value={car.brand}
+              onChange={(e) => setCar({ ...car, brand: e.target.value })}
+            />
+          </div>
+
+          <div className="flex flex-col w-full">
+            <label> Model</label>
+            <input
+              type="text"
+              placeholder="e.g. X5, E-Class, M4....."
+              required
+              className="px-3 py-2 mt-1 border border-borderColor rounded-md outline-none"
+              value={car.model}
+              onChange={(e) => setCar({ ...car, model: e.target.value })}
+            />
+          </div>
+        </div>
       </form>
     </div>
   );
